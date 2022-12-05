@@ -1,0 +1,141 @@
+@font-face {
+    font-family: butler;
+    src: url(../Butler_Black.otf);
+  }
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family:  Arial, Helvetica, sans-serif;
+    background-color: rgb(252, 250, 249);
+    text-align: center;
+}
+h1{
+    font:bold;
+    font-family: butler;
+    font-size: 3rem;
+    background-image: linear-gradient(rgb(139, 188, 209), white) ;
+
+}
+.new-book{
+    border-color: black;
+    margin-bottom: 10px;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+    height: 100px;
+}
+button{
+    cursor: pointer;
+}
+.table-container{
+    background-color: rgb(251, 245, 245);
+    height: 50%;
+    width: 60%;
+    padding: 20px;
+    border-radius: 20px;
+    /* margin: 20px; */
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: -1px 1px 7px 1px #03012871;
+} 
+button:hover{
+    background-color: rgba(85, 82, 82, 0.533);
+
+}  
+.table-container button{ 
+    margin: 8px;  
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: rgb(42, 41, 41);
+}
+.read :hover {
+    background-color: #a6c1ee;
+}
+.read{
+    background-image: linear-gradient( #f6d465c5 0%, #fd9f85bf 51%, #f6d465b1 100%);
+}
+.update{
+    background-image: linear-gradient( #84faafcc 0%, #8fd2f4ca 51%, #84faafd5 100%);
+}
+.delete{
+    background-image: linear-gradient( #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+tr{
+    border-bottom: 2px solid rgba(213, 210, 208, 0.698);
+}
+th{
+    padding: 10px;
+      
+}
+table{
+    text-align: left;
+    margin: 20px;
+    border-collapse: collapse;  
+    margin: auto;
+}
+
+.modal{
+    background-color: rgb(164, 176, 181);
+    height: 550px;
+    width: 400px;
+    position: absolute;
+    right: -50%;
+    top: 0;
+    text-align: center;  
+    padding: 20px;
+    color: rgb(37, 34, 26);
+}
+
+.modal.open {
+    transition: right .5s;
+    right: 0;
+}
+
+.rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: black;
+    
+}
+.rate button{
+    height: 20px;
+}
+
+.rate-screen{
+    background-color: aliceblue;
+    margin: 0 5px;
+    height: 20px;
+    width: 20px;
+}
+
+h6{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.change-page{
+    background-image: linear-gradient(rgba(237, 245, 247, 0.84),rgb(149, 202, 208)) ;
+}
+.change-page button:hover{
+    background-color: black;
+}
+.change-page button{
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.237);
+    color: white;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+

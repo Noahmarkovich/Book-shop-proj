@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Noah's book-store</title>
+</head>
+
+<body onload="onInit()">
+    <h1>Welcome to my book store</h1>
+
+<div class="container"> 
+    <button class="new-book" onclick="onAddBook()"> Create new book</button>
+    <div>
+        Sort by:
+        <label>
+            Max Price:
+            <input type="range" min="5" max="50" value="20" class="filter-price-range"
+                onchange="this.title=this.value;onSetFilterBy({maxPrice: this.value})" />
+        </label>
+        <label>
+            Min rate:
+            <input type="range" min="0" max="10" value="0" class="filter-rate-range"
+                onchange="this.title=this.value;onSetFilterBy({minRate: this.value})" />
+            <form onsubmit="onSearchBy(event)">
+                <input type="text" name="txt-filter" placeholder="Search..." />
+                <button>🔎</button>
+            </form>
+        </label>
+    </div>
+    <div class="table-container">
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        <tbody>
+        </tbody>
+        </thead>
+    </table>
+</div>
+</div>
+<div class="change-page">
+    <button id="prev" onclick="onChangePage(-1)">Previous Page</button><button id="next" onclick="onChangePage(+1)">Next Page</button>
+</div>  
+<div class="modal">
+    <h3></h3>
+    <h4>Price <span></span> </h4>
+    <h5>Book Description</h5>
+    <p></p>
+    <h6>Rate the Book (0-10)</h6>
+    <div class="rate"> 
+        <button onclick="onRateBook('-')">-</button><div class="rate-screen">0</div><button onclick="onRateBook('+')">+</button>
+    </div>
+    
+    <button onclick="onCloseModal()">Close</button>
+</div>
+
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
+</body>
+
+</html>
+
