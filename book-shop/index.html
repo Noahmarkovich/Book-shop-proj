@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Noah's book-store</title>
+</head>
+
+<body onload="onInit()">
+    <!-- <h1>Welcome to my book store</h1> -->
+    <h1 class="text-center display-1 " data-trans="title"><strong>Book inventory</strong></h1>
+    <a class="en" href="http://127.0.0.1:5555/index.html?lang=en">En</a> 
+    <a href="http://127.0.0.1:5555/index.html?lang=he"> עב</a>
+    <!-- <select onchange="onSetLang(this.value)">
+        <option value="en">English</option>
+        <option value="he">עברית</option>
+      </select> -->
+
+    <div class="container text-center">
+        <div class="search-add">
+        <button data-trans="create-book" class="new-book" onclick="onAddBook()"> Create new book</button>
+        <form onsubmit="onSearchBy(event)">
+            <input type="text" name="txt-filter" placeholder="Search..." data-trans="search-placeholder" />
+            <button>🔎</button>
+        </form>
+        </div>
+        <div class="sort-c">
+            <div class="h5" data-trans="sort-header">Sort by:</div>
+            <label data-trans="sort-price"> Max Price: </label>
+            <input type="range" min="5" max="50" value="20" class="filter-price-range"
+                onchange="this.title=this.value;onSetFilterBy({maxPrice: this.value})" />
+
+            <label data-trans="sort-rate"> Min rate: </label>
+            <input type="range" min="0" max="10" value="0" class="filter-rate-range"
+                onchange="this.title=this.value;onSetFilterBy({minRate: this.value})" />
+           
+        </div>
+        </div>
+        <div class="table-container">
+            <table class="table-active">
+                <thead>
+                    <tr>
+                        <th data-trans="table-id">Id</th>
+                        <th data-trans="table-name">Title</th>
+                        <th></th>
+                        <th data-trans="table-price">Price</th>
+                        <th data-trans="table-actions">Actions</th>
+                    </tr>
+                <tbody>
+                </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="change-page text-center">
+        <button data-trans="prev-page" id="prev" onclick="onChangePage(-1)">Previous Page</button><button
+            data-trans="next-page" id="next" onclick="onChangePage(+1)">Next Page</button>
+    </div>
+    <div class="reg-modal">
+        <h3></h3>
+        <h4 data-trans="modal-price">Price </h4>
+        <span></span>
+        <h5 data-trans="modal-desc">Book Description</h5>
+        <p></p>
+        <h6 data-trans="modal-rate">Rate the Book (0-10)</h6>
+        <div class="rate">
+            <button onclick="onRateBook('-')">-</button>
+            <div class="rate-screen">0</div><button onclick="onRateBook('+')">+</button>
+        </div>
+
+        <button onclick="onCloseModal()">Close</button>
+    </div>
+
+
+
+    <script src="lib/bootstrap/bootstrap.bundel.js"></script>
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js\services\i18n.service.js"></script>
+    <script src="js/book.controller.js"></script>
+</body>
+
+</html>

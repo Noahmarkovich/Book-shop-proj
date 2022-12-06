@@ -1,0 +1,188 @@
+@font-face {
+    font-family: THEBOLDFONT;
+    src: url(../THEBOLDFONT\ 2022.otf);
+
+  }
+@font-face {
+    font-family: Noot;
+    src: url(../Noot.otf);
+
+  }
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family:  Arial, Helvetica, sans-serif;
+    background-color: rgb(252, 250, 249);
+    text-align: center;
+}
+body.rtl {
+    direction: rtl;
+}
+h1{
+    font:bold;
+    font-family: Noot;
+    font-size: 3rem;
+    background-image: url("../img/books.jpg");
+    padding: 10%;
+    background-size: cover;
+    opacity: 0.85;
+    color: rgb(252, 252, 252);
+    text-shadow: 4px 1px 1px black;
+
+
+}
+.new-book{
+    border-color: black;
+    margin-bottom: 10px;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 6%
+}
+
+img{
+    max-width: 100%;
+    height: 100px;
+}
+button{
+    cursor: pointer;
+}
+tr{
+    text-align: center;
+}
+.table-container{
+    background-color: rgb(251, 245, 245);
+    height: 50%;
+    width: 60%;
+    padding: 20px;
+    border-radius: 20px;
+    /* margin: 20px; */
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: -1px 1px 7px 1px #03012871;
+} 
+button:hover{
+    background-color: rgba(85, 82, 82, 0.533);
+
+}  
+.table-container button{ 
+    margin: 8px;  
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: rgb(42, 41, 41);
+}
+.read :hover {
+    background-color: #a6c1ee;
+}
+.read{
+    /* background-color: rgb(0, 123, 255); */
+    background-image: linear-gradient( #f6d465c5 0%, #c7a77bc3  100%);
+}
+.update{
+    background-image: linear-gradient( #84faafcc 0%, #63af9fcf  100%);
+}
+.delete{
+    background-image: linear-gradient( #fbc2eb 0%, #c78cd3 100%);
+}
+
+th, td{
+    padding: 10px;
+    padding-right: 40px;
+      
+}
+table{
+    text-align: left;
+    padding-right: 20px;
+    border-collapse: collapse;  
+    margin: auto;
+}
+
+.reg-modal{
+    background-color: rgb(164, 176, 181);
+    height: 65%;
+    width: 30%;
+    position: absolute;
+    right: -50%;
+    top: 0;
+    text-align: center;  
+    padding: 20px;
+    color: rgb(37, 34, 26);
+}
+
+.reg-modal.open {
+    transition: right .5s;
+    right: 0;
+}
+
+.rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: black;
+    
+}
+.rate button{
+    height: 20px;
+}
+
+.rate-screen{
+    background-color: aliceblue;
+    margin: 0 5px;
+    height: 20px;
+    width: 20px;
+}
+
+h6{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.change-page{
+    background-color: rgb(54, 34, 7);
+}
+.change-page button:hover{
+    background-color: black;
+}
+.change-page button{
+    margin: 10px;
+    background-color: rgba(184, 179, 179, 0.439);
+    color: white;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+a{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+    color: black;
+    
+}
+.en{
+    right: 4%; 
+}
+a:hover{
+    background-color: rgb(174, 64, 0);
+    color: black;
+}
+
+.search-add{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+form{
+    font-size: 1.1em;
+    margin-top: 5px;
+}
